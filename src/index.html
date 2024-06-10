@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/58218da0f5.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="manifest" href="./favicon_io/site.webmanifest" crossorigin="use-credentials">
+    <title>SkyForecast</title>
+</head>
+    <!-- Body -->
+    <body  class="font-RB bg-slate-600 text-white box-border h-full overflow-hidden md:overflow-visible sm:overflow-visible">
+
+        <!-- Card Layout -->
+        <div class="weather-container h-full mt-6 px-8 py-4 w-full grid grid-cols-[3fr,1.5fr] md:mt-0 md:grid-rows-2 md:h-full  md:p-12 md:grid-cols-3 md:justify-center sm:grid-cols-2 sm:grid-rows-3 ">
+            <div class="weather-card h-full relative rounded-tl-xl rounded-bl-xl md:h-[45%] md:col-span-3 md:rounded-tl-lg md:rounded-tr-lg md:rounded-bl-none md:rounded-br-none sm:col-span-2 sm:h-[65%]">
+                <!-- Weather Image & Info -->
+                    <div class="overimg-text absolute left-6 bottom-10 z-20">
+                        <h1 class="temperature inline-block text-8xl relative bottom-8 md:text-6xl md:-bottom-6 sm:text-6xl sm:bottom-8"></h1> 
+                        <h2 class="tempt-city inline-block text-3xl relative bottom-12 ml-6 md:-bottom-4 sm:ml-0 sm:text-2xl"></h2>
+                        <div class="city-condition inline-block">
+                            <img class="city-weather-img md:absolute md:bottom-0 md:w-[16%]" src="" >
+                            <h3 class=" city-weather inline-flex flex-col items-center text-2xl relative bottom-8 left-3 mt-8 md:mt-4 md:-bottom-5 md:text-lg md:font-bold"></h3>
+                        </div>
+                    </div>  
+                </div>
+                    <div class="weather-info h-full bg-gray-800 w-full px-6 py-2 rounded-tr-xl rounded-br-xl md:rounded-tr-none md:rounded-tl-none md:-translate-y-[55%] md:col-span-3 md:p-2 md:rounded-bl-lg md:rounded-br-lg sm:col-span-2 sm:-translate-y-[45%] sm:row-span-1 ">
+                        <!-- Search City -->
+                        <form class="search-form mt-4">
+                        <div class="search-box w-full relative z-30 bg-neutral-900 mb-2 px-2 py-4 rounded-md flex justify-center items-center">
+                        <input type="text" name="search" id="city-search" placeholder="Enter the City Name" class="relative z-30 bg-transparent border-b-[1.5px] focus:outline-none transition-[border] duration-[500] ease-out focus:border-cyan-600 placeholder:text-lg  w-full pr-2 ">
+                        <button id="search-btn" class="cursor-pointer"><i class="fa-solid fa-magnifying-glass text-lg relative z-30" style="color: #ebebeb;"></i></button>
+                    </div>
+                </form>
+                        <!-- Weekly Forecast -->    
+                        <div class="weekly-weather px-2 py-3 w-full mt-5 md:mt-4 md:ml-4">
+                            <h1 class="text-2xl">Weekly Forecast</h1>
+                            <!-- Images weather -->
+                            <div class="weekly-forecast grid grid-cols-5 md:grid-rows-1">
+                                <div class="forecast-1 flex flex-col align-middle text-center gap-4 md:gap-2">
+                                    <img class="forecast-1-img md:w-[70%] md:ml-5" src="" >
+                                    <h3 class="forecast-text-1"></h3>
+                                    <p class="forecast-1-p px-4"></p>
+                                    <div class="day1-text flex justify-center">
+                                        <h2>Today</h2>
+                                    </div>
+                                </div>
+                                <div class="forecast-2 flex flex-col align-middle text-center gap-x-4 gap-y-2 md:gap-2">
+                                    <img class="forecast-2-img md:w-[70%] md:ml-5" src="">
+                                    <h3 class="forecast-text-2"></h3>
+                                    <p class="forecast-2-p px-4"></p>
+                                    <div class="day2-text flex justify-center"><h2>Tommorrow</h2></div>
+                                </div>
+                                <div class="forecast-3 flex flex-col align-middle text-center gap-x-4 gap-y-2 md:gap-2">
+                                    <img class="forecast-3-img md:w-[70%] md:ml-5" src="">
+                                    <h3 class="forecast-text-3"></h3>
+                                    <p class="forecast-3-p px-4"></p>
+                                    <div class="day3-text flex justify-center"><h2 class="">Day 3</h2></div>
+                                </div>
+                                <div class="forecast-4 flex flex-col align-middle text-center gap-x-4 gap-y-2 md:gap-2">
+                                    <img class="forecast-4-img md:w-[70%] md:ml-5" src="">
+                                    <h3 class="forecast-text-4"></h3>
+                                    <p class="forecast-4-p px-4"></p>
+                                    <div class="day4-text flex justify-center"><h2>Day 4</h2></div>
+                                </div>
+                                <div class="forecast-5 flex flex-col align-middle text-center md:gap-2">
+                                    <img class="forecast-5-img md:w-[70%] md:ml-5" src="">
+                                    <h3 class="forecast-text-5"></h3>
+                                    <p class="forecast-5-p px-4"></p>
+                                    <div class="day5-text flex justify-center"><h2>Day 5</h2></div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Forecast Info -->
+                        <h1 class="text-2xl py-3 md:ml-4">Forecast Figures</h1>
+                            <div class="forecast-info grid gap-y-3 md:px-4">
+                                    <div class="humidity flex justify-between">
+                                        <h2>Humidity</h2>
+                                        <span class="humidityText"></span>
+                                    </div>
+                                    <div class="wind-speed flex justify-between">
+                                        <h2>Wind Speed</h2>
+                                        <span class="windText"></span>
+                                    </div>
+                                    <div class="precipitation flex justify-between">
+                                        <h2>Precipitation</h2>
+                                        <span class="precipitationText"></span>
+                                    </div>
+                                    <div class="visibility flex justify-between">
+                                        <h2>Visibility</h2>
+                                        <span class="visibilityText"></span>
+                                    </div>
+                            </div>
+                    </div>
+            </div>
+                    <!--JS File  -->
+                    <script src="./js/script.js"></script>
+                    <!-- <script src="./js/script-test.js"></script> -->
+    </body>
+    </html>
