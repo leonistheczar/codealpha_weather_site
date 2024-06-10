@@ -1,7 +1,3 @@
-Here's a basic structure for a README file tailored for your "SkyForecast" weather dashboard project on GitHub:
-
----
-
 # SkyForecast Weather Dashboard
 
 SkyForecast is a responsive weather dashboard project that fetches weather data for different cities, providing forecasts for the next 5 days using an API.
