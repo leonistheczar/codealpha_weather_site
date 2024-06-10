@@ -57,6 +57,8 @@ async function fetchWeatherData() {
     updateUI(weatherData);
     console.log(weatherData);
 }
+
+//Background Images changes on certain condition wrt the city's local time
 function setBackgroundImage(weatherData) {
      //API variables initialization
      currentCondition = weatherData.current.condition;
@@ -147,7 +149,6 @@ function updateUI(weatherData) {
         //Time to hours
         const dateObject = new Date(localTime);
         const hour = dateObject.getHours();
-        console.log(hour);
         //UI Main Showcase Elements
             tempt.textContent = `${weatherData.current.temp_c} °C`;
             temptCity.textContent = weatherData.location.name;
